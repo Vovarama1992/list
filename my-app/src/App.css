@@ -1,6 +1,6 @@
 .container {
   background: rgb(215, 215, 204);
-  width: 80%;
+  width: 80vw;
   height: 100vh;
   opacity: 0.8;
   padding: 0 10% 0 10%;
@@ -27,20 +27,87 @@ input[type="text"]{
   margin: 0; 
   box-sizing: border-box; 
   font-size: 22px;
+  border-left: 20px;
+  text-indent: 27px;
+  
 }
+
+input::placeholder {
+  text-indent: 0px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label:before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px; 
+  border-radius: 50%; 
+  border: 2px solid #aaa; 
+  margin-right: 5px; 
+  padding-left: 3px;
+  
+}
+
+
+
+
+
+input[type="checkbox"]:checked + label:before {
+  content: '\2713'; 
+  font-size: 20px; 
+  color: #833f3f; 
+  position: relative; 
+   
+   
+}
+
+
+
 
 .checker {
   background: white;
+  border-bottom: 1px solid black;
+  height: 35px;
+  padding-top: 8px;
+  
+  
+  
   
 }
 
-input[type="checkbox"]:checked + label {
-  text-decoration: line-through;
-}
+
 .inform {
   border-top: 1px solid black;
   height: 6vh;
-  width: 100%;
+  width: auto;
   background: white;
+  padding-top: 10px;
+  padding-left: 8px;
   
+}
+button {
+  border: none;
+  background: white;
+}
+button:hover {
+  border: 2px solid red;
+}
+.itemsleft {
+  margin-right: 25px;
+ 
+}
+.whatToDo {
+  display: inline-block;
+  padding-bottom: 15px;
+
+}
+.active {
+  margin-right: 10px;
+}
+.completed {
+  margin-right: 25px;
 }

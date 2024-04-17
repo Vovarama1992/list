@@ -80,16 +80,16 @@ function App() {
 function Input({index, value, func, list}) {
   return (
     <div className="checker" hidden={list[index].hidden}><input type="checkbox" onChange={() => func(index)}  id={index}></input>
-<label htmlFor={index}>{`     ${value}`}</label></div>
+<label htmlFor={index}><p className="whatToDo">{`     ${value}`}</p></label></div>
   )
 }
 
 function Inform({ num, buttonClick, clear }) {
   return (
     <div className="inform">
-      {num}  Items left    <button onClick={() => buttonClick("all")}>All</button>         
-      <button onClick={() => buttonClick("active")}>Active</button>
-             <button onClick={() => buttonClick("completed")}>Completed</button>       
+      {num}  <span className="itemsleft">Items left</span>    <button onClick={() => buttonClick("all")}>All</button>         
+      <button className="active" onClick={() => buttonClick("active")}>Active</button>
+             <button className="completed" onClick={() => buttonClick("completed")}>Completed</button>       
                <button onClick={clear}>Clear Completed</button>
 
     </div>
