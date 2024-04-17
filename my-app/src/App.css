@@ -1,0 +1,46 @@
+.container {
+  background: rgb(215, 215, 204);
+  width: 80%;
+  height: 100vh;
+  opacity: 0.8;
+  padding: 0 10% 0 10%;
+  
+}
+.todo {
+  text-align: center;
+  font-size: 45px;
+  color:  rgb(223, 87, 87);
+  
+}
+.needs {
+  background: white;
+  height: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+input[type="text"]{
+  width: 100%; 
+  border: none; 
+  outline: none; 
+  padding: 0; 
+  margin: 0; 
+  box-sizing: border-box; 
+  font-size: 22px;
+}
+
+.checker {
+  background: white;
+  
+}
+
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+}
+.inform {
+  border-top: 1px solid black;
+  height: 6vh;
+  width: 100%;
+  background: white;
+  
+}
